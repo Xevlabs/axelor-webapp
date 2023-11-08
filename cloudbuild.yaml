@@ -16,10 +16,10 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ["push", "gcr.io/$PROJECT_ID/$REPO_NAME", "--all-tags"]
 
-  # Deploy image on service
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
-    args: ['run','deploy','${_SERVICE_NAME}','--image','gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA','--region','europe-west9','--allow-unauthenticated']
+#  # Deploy image on service
+#  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#    entrypoint: gcloud
+#    args: ['run','deploy','${_SERVICE_NAME}','--image','gcr.io/$PROJECT_ID/$REPO_NAME:$COMMIT_SHA','--region','europe-west9','--allow-unauthenticated']
 
 images:
   - 'gcr.io/$PROJECT_ID/$REPO_NAME'
