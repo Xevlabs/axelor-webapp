@@ -41,6 +41,7 @@ allprojects {
 tasks.withType(PublishToMavenRepository).configureEach { it.enabled = false }
 
 dependencies {
+  implementation 'com.google.cloud.sql:postgres-socket-factory:1.11.1'
   gradle.appModules.each { dir ->
     implementation project(":modules:$dir.name")
   }
