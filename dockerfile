@@ -10,7 +10,6 @@ VOLUME /opt/tomcat/props
 VOLUME /opt/tomcat/axelor
 
 COPY build/libs/axelor-erp-*.war /opt/tomcat/webapps/ROOT.war
-COPY server.xml opt/tomcat/conf/server.xml
 RUN rm -rf /opt/tomcat/webapps/ROOT
 EXPOSE 8080
 
